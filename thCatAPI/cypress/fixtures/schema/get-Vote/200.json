@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "array",
+    "additionalItems": true,
+    "items": {
+        "anyOf": [
+            {
+                "type": "object",
+                "required": [
+                    "id",
+                    "user_id",
+                    "image_id",
+                    "sub_id",
+                    "created_at",
+                    "image"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "user_id": {
+                        "type": "string"
+                    },
+                    "image_id": {
+                        "type": "string"
+                    },
+                    "sub_id": {
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "type": "string"
+                    },
+                    "image": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "url"
+                        ],
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}
